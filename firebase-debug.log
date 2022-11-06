@@ -1,0 +1,115 @@
+[debug] [2022-11-06T20:49:37.701Z] ----------------------------------------------------------------------
+[debug] [2022-11-06T20:49:37.711Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\IT\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-11-06T20:49:37.713Z] CLI Version:   11.16.0
+[debug] [2022-11-06T20:49:37.714Z] Platform:      win32
+[debug] [2022-11-06T20:49:37.714Z] Node Version:  v16.17.0
+[debug] [2022-11-06T20:49:38.410Z] Time:          Sun Nov 06 2022 21:49:37 GMT+0100 (West Africa Standard Time)
+[debug] [2022-11-06T20:49:38.412Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-11-06T20:49:38.913Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-11-06T20:49:38.915Z] > authorizing via signed-in user (jrmholawale@gmail.com)
+[debug] [2022-11-06T20:49:38.916Z] [iam] checking project golinbox-altschool-exam for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-11-06T20:49:38.925Z] > refreshing access token with scopes: []
+[debug] [2022-11-06T20:49:38.935Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-11-06T20:49:38.936Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-11-06T20:49:42.915Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-11-06T20:49:42.916Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-11-06T20:49:43.264Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/golinbox-altschool-exam:testIamPermissions [none]
+[debug] [2022-11-06T20:49:43.265Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/golinbox-altschool-exam:testIamPermissions x-goog-quota-user=projects/golinbox-altschool-exam
+[debug] [2022-11-06T20:49:43.266Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/golinbox-altschool-exam:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-11-06T20:49:45.465Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/golinbox-altschool-exam:testIamPermissions 200
+[debug] [2022-11-06T20:49:45.466Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/golinbox-altschool-exam:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-11-06T20:49:45.470Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/golinbox-altschool-exam [none]
+[debug] [2022-11-06T20:49:49.338Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/golinbox-altschool-exam 200
+[debug] [2022-11-06T20:49:49.339Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/golinbox-altschool-exam {"projectId":"golinbox-altschool-exam","projectNumber":"338591330430","displayName":"GoLinbox-AltSchool Exam","name":"projects/golinbox-altschool-exam","resources":{"hostingSite":"golinbox-altschool-exam"},"state":"ACTIVE","etag":"1_6fe2e42f-b5a4-4ac6-b641-b3855535e4c5"}
+[info] 
+[info] === Deploying to 'golinbox-altschool-exam'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-11-06T20:49:49.374Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/golinbox-altschool-exam/versions [none]
+[debug] [2022-11-06T20:49:49.374Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/golinbox-altschool-exam/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-11-06T20:49:51.879Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/golinbox-altschool-exam/versions 200
+[debug] [2022-11-06T20:49:51.880Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/golinbox-altschool-exam/versions {"name":"projects/338591330430/sites/golinbox-altschool-exam/versions/e735fd9a333fa289","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[golinbox-altschool-exam]: beginning deploy... 
+[info] i  hosting[golinbox-altschool-exam]: found 20 files in build 
+[debug] [2022-11-06T20:49:51.968Z] [hosting] uploading with 200 concurrency
+[debug] [2022-11-06T20:49:52.696Z] [hosting] hash cache [YnVpbGQ] stored for 20 files
+[debug] [2022-11-06T20:49:52.697Z] [hosting][hash queue][FINAL] {"max":577,"min":19,"avg":127.5,"active":0,"complete":20,"success":20,"errored":0,"retried":0,"total":20,"elapsed":648}
+[debug] [2022-11-06T20:49:52.699Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/338591330430/sites/golinbox-altschool-exam/versions/e735fd9a333fa289:populateFiles [none]
+[debug] [2022-11-06T20:49:52.700Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/338591330430/sites/golinbox-altschool-exam/versions/e735fd9a333fa289:populateFiles {"files":{"/favicon.ico":"eae62e993eb980ec8a25058c39d5a51feab118bd2100c4deebb2a9c158ec11f9","/GoLinbox-Favicon.ico":"d35d2be9b6bfae500bbe7f8b66b5808003f1a834ee4beadca07fd5b85cee2996","/logo192.png":"3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b","/logo512.png":"ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331","/manifest.json":"aff3449bdc238776f5d6d967f19ec491b36aed5fb7f23ccff6500736fd58494a","/robots.txt":"bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49","/Logo/GoLinbox-1.png":"4e39e80aa88f97cf521e78a7a333c694a55dc2a7c2f1796abdd88b9299c63471","/Logo/Header Img.png":"aa3c9af381807a65808bfcc77cd8fcafb6ac56f5dee5151380746800a1eaf9e6","/asset-manifest.json":"862d8dfe1b3d62936ed340f1fc0015cab90eedbc7f222551ce63a3c79947386b","/index.html":"36751d4d1aea35ccbeca2501da462a0bb76eeb97a21e8ba926734a2e3746ee76","/static/js/main.9ba419a1.js.LICENSE.txt":"f3d94de3dd868a790f5618fd9dc106f2ab2e45151a76a6b2090f0a9c6820c134","/static/css/main.1fe2cff0.css":"49bd398395b7c9ab9803c0067031e2f56f9e3c7be5d03d470018c4a265a92379","/static/css/main.1fe2cff0.css.map":"b67be5bc02e65012e9873f2ca083a118027661aa4d3b0026aeecac7e2ecb0326","/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2":"38d88317bebc79b4945a679daadd47daebbadc5cd13b41473143394ca7e8d892","/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff":"b51c2c79cce89b7c5947672c13f735c24ee1a9f8f6ebdb957c5fdfe567f27d37","/static/media/fontawesome-webfont.8b43027f47b20503057d.eot":"4944999b255adf473d5b86b300eba33737e8f598c17f24e82a28582393331209","/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf":"d9cef07d4f3569883fb4c3db76acea5478cef80775d012841eb78a42e60a8e89","/static/js/main.9ba419a1.js":"8cf2f99b535e616cb4760b01178de61fc48b9a66ccc4277a5946ba90c0697569","/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg":"9b74ca5333a9ca156ae6ef0920d5bc42d283e95d25651bf4375404f0407a63ab","/static/js/main.9ba419a1.js.map":"9a78840620389a2a4ac968739fe5a0ad8844014eaf8732b52abddba17e8c5e2e"}}
+[debug] [2022-11-06T20:49:55.152Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/338591330430/sites/golinbox-altschool-exam/versions/e735fd9a333fa289:populateFiles 200
+[debug] [2022-11-06T20:49:55.152Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/338591330430/sites/golinbox-altschool-exam/versions/e735fd9a333fa289:populateFiles {"uploadRequiredHashes":["8cf2f99b535e616cb4760b01178de61fc48b9a66ccc4277a5946ba90c0697569","49bd398395b7c9ab9803c0067031e2f56f9e3c7be5d03d470018c4a265a92379","36751d4d1aea35ccbeca2501da462a0bb76eeb97a21e8ba926734a2e3746ee76","862d8dfe1b3d62936ed340f1fc0015cab90eedbc7f222551ce63a3c79947386b","b67be5bc02e65012e9873f2ca083a118027661aa4d3b0026aeecac7e2ecb0326","9a78840620389a2a4ac968739fe5a0ad8844014eaf8732b52abddba17e8c5e2e"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/golinbox-altschool-exam/versions/e735fd9a333fa289/files"}
+[debug] [2022-11-06T20:49:55.163Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/golinbox-altschool-exam/versions/e735fd9a333fa289/files/8cf2f99b535e616cb4760b01178de61fc48b9a66ccc4277a5946ba90c0697569 [none]
+[debug] [2022-11-06T20:49:55.163Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/golinbox-altschool-exam/versions/e735fd9a333fa289/files/8cf2f99b535e616cb4760b01178de61fc48b9a66ccc4277a5946ba90c0697569 [stream]
+[debug] [2022-11-06T20:49:55.169Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/golinbox-altschool-exam/versions/e735fd9a333fa289/files/49bd398395b7c9ab9803c0067031e2f56f9e3c7be5d03d470018c4a265a92379 [none]
+[debug] [2022-11-06T20:49:55.170Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/golinbox-altschool-exam/versions/e735fd9a333fa289/files/49bd398395b7c9ab9803c0067031e2f56f9e3c7be5d03d470018c4a265a92379 [stream]
+[debug] [2022-11-06T20:49:55.175Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/golinbox-altschool-exam/versions/e735fd9a333fa289/files/36751d4d1aea35ccbeca2501da462a0bb76eeb97a21e8ba926734a2e3746ee76 [none]
+[debug] [2022-11-06T20:49:55.176Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/golinbox-altschool-exam/versions/e735fd9a333fa289/files/36751d4d1aea35ccbeca2501da462a0bb76eeb97a21e8ba926734a2e3746ee76 [stream]
+[debug] [2022-11-06T20:49:55.182Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/golinbox-altschool-exam/versions/e735fd9a333fa289/files/862d8dfe1b3d62936ed340f1fc0015cab90eedbc7f222551ce63a3c79947386b [none]
+[debug] [2022-11-06T20:49:55.183Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/golinbox-altschool-exam/versions/e735fd9a333fa289/files/862d8dfe1b3d62936ed340f1fc0015cab90eedbc7f222551ce63a3c79947386b [stream]
+[debug] [2022-11-06T20:49:55.188Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/golinbox-altschool-exam/versions/e735fd9a333fa289/files/b67be5bc02e65012e9873f2ca083a118027661aa4d3b0026aeecac7e2ecb0326 [none]
+[debug] [2022-11-06T20:49:55.188Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/golinbox-altschool-exam/versions/e735fd9a333fa289/files/b67be5bc02e65012e9873f2ca083a118027661aa4d3b0026aeecac7e2ecb0326 [stream]
+[debug] [2022-11-06T20:49:55.195Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/golinbox-altschool-exam/versions/e735fd9a333fa289/files/9a78840620389a2a4ac968739fe5a0ad8844014eaf8732b52abddba17e8c5e2e [none]
+[debug] [2022-11-06T20:49:55.195Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/golinbox-altschool-exam/versions/e735fd9a333fa289/files/9a78840620389a2a4ac968739fe5a0ad8844014eaf8732b52abddba17e8c5e2e [stream]
+[debug] [2022-11-06T20:49:55.201Z] [hosting][populate queue][FINAL] {"max":2510,"min":2510,"avg":2510,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":2549}
+[debug] [2022-11-06T20:49:55.202Z] [hosting] uploads queued: 6
+[debug] [2022-11-06T20:49:58.907Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/golinbox-altschool-exam/versions/e735fd9a333fa289/files/b67be5bc02e65012e9873f2ca083a118027661aa4d3b0026aeecac7e2ecb0326 200
+[debug] [2022-11-06T20:49:58.908Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/golinbox-altschool-exam/versions/e735fd9a333fa289/files/b67be5bc02e65012e9873f2ca083a118027661aa4d3b0026aeecac7e2ecb0326 [stream]
+[debug] [2022-11-06T20:49:59.215Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/golinbox-altschool-exam/versions/e735fd9a333fa289/files/49bd398395b7c9ab9803c0067031e2f56f9e3c7be5d03d470018c4a265a92379 200
+[debug] [2022-11-06T20:49:59.216Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/golinbox-altschool-exam/versions/e735fd9a333fa289/files/49bd398395b7c9ab9803c0067031e2f56f9e3c7be5d03d470018c4a265a92379 [stream]
+[debug] [2022-11-06T20:49:59.496Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/golinbox-altschool-exam/versions/e735fd9a333fa289/files/36751d4d1aea35ccbeca2501da462a0bb76eeb97a21e8ba926734a2e3746ee76 200
+[debug] [2022-11-06T20:49:59.496Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/golinbox-altschool-exam/versions/e735fd9a333fa289/files/36751d4d1aea35ccbeca2501da462a0bb76eeb97a21e8ba926734a2e3746ee76 [stream]
+[debug] [2022-11-06T20:50:00.186Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/golinbox-altschool-exam/versions/e735fd9a333fa289/files/862d8dfe1b3d62936ed340f1fc0015cab90eedbc7f222551ce63a3c79947386b 200
+[debug] [2022-11-06T20:50:00.187Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/golinbox-altschool-exam/versions/e735fd9a333fa289/files/862d8dfe1b3d62936ed340f1fc0015cab90eedbc7f222551ce63a3c79947386b [stream]
+[debug] [2022-11-06T20:50:03.257Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/golinbox-altschool-exam/versions/e735fd9a333fa289/files/8cf2f99b535e616cb4760b01178de61fc48b9a66ccc4277a5946ba90c0697569 200
+[debug] [2022-11-06T20:50:03.257Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/golinbox-altschool-exam/versions/e735fd9a333fa289/files/8cf2f99b535e616cb4760b01178de61fc48b9a66ccc4277a5946ba90c0697569 [stream]
+[debug] [2022-11-06T20:50:08.876Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/golinbox-altschool-exam/versions/e735fd9a333fa289/files/9a78840620389a2a4ac968739fe5a0ad8844014eaf8732b52abddba17e8c5e2e 200
+[debug] [2022-11-06T20:50:08.877Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/golinbox-altschool-exam/versions/e735fd9a333fa289/files/9a78840620389a2a4ac968739fe5a0ad8844014eaf8732b52abddba17e8c5e2e [stream]
+[debug] [2022-11-06T20:50:08.878Z] [hosting][upload queue][FINAL] {"max":13717,"min":3747,"avg":6498.833333333333,"active":0,"complete":6,"success":6,"errored":0,"retried":0,"total":6,"elapsed":13723}
+[info] +  hosting[golinbox-altschool-exam]: file upload complete 
+[debug] [2022-11-06T20:50:08.883Z] [hosting] deploy completed after 16992ms
+[debug] [2022-11-06T20:50:08.893Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "golinbox-altschool-exam"
+    },
+    "version": "projects/338591330430/sites/golinbox-altschool-exam/versions/e735fd9a333fa289"
+  }
+]
+[info] i  hosting[golinbox-altschool-exam]: finalizing version... 
+[debug] [2022-11-06T20:50:08.910Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/golinbox-altschool-exam/versions/e735fd9a333fa289 updateMask=status%2Cconfig
+[debug] [2022-11-06T20:50:08.911Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/golinbox-altschool-exam/versions/e735fd9a333fa289 {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2022-11-06T20:50:10.652Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/golinbox-altschool-exam/versions/e735fd9a333fa289 200
+[debug] [2022-11-06T20:50:10.652Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/golinbox-altschool-exam/versions/e735fd9a333fa289 {"name":"projects/338591330430/sites/golinbox-altschool-exam/versions/e735fd9a333fa289","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-11-06T20:49:47.357258Z","createUser":{"email":"jrmholawale@gmail.com"},"finalizeTime":"2022-11-06T20:50:06.436781Z","finalizeUser":{"email":"jrmholawale@gmail.com"}}
+[debug] [2022-11-06T20:50:10.653Z] [hosting] finalized version for golinbox-altschool-exam:[object Object]
+[info] +  hosting[golinbox-altschool-exam]: version finalized 
+[info] i  hosting[golinbox-altschool-exam]: releasing new version... 
+[debug] [2022-11-06T20:50:10.659Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/golinbox-altschool-exam/channels/live/releases versionName=projects%2F338591330430%2Fsites%2Fgolinbox-altschool-exam%2Fversions%2Fe735fd9a333fa289
+[debug] [2022-11-06T20:50:10.660Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/golinbox-altschool-exam/channels/live/releases {}
+[debug] [2022-11-06T20:50:12.167Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/golinbox-altschool-exam/channels/live/releases 200
+[debug] [2022-11-06T20:50:12.167Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/golinbox-altschool-exam/channels/live/releases {"name":"projects/338591330430/sites/golinbox-altschool-exam/channels/live/releases/1667767807390110","version":{"name":"projects/338591330430/sites/golinbox-altschool-exam/versions/e735fd9a333fa289","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-11-06T20:49:47.357258Z","createUser":{"email":"jrmholawale@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu3S2DJTRv2T27Gc9QngV16MafbfTlTkKwYnDSfdJw"},"finalizeTime":"2022-11-06T20:50:06.436781Z","finalizeUser":{"email":"jrmholawale@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu3S2DJTRv2T27Gc9QngV16MafbfTlTkKwYnDSfdJw"}},"type":"DEPLOY","releaseTime":"2022-11-06T20:50:07.390110299Z","releaseUser":{"email":"jrmholawale@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu3S2DJTRv2T27Gc9QngV16MafbfTlTkKwYnDSfdJw"}}
+[debug] [2022-11-06T20:50:12.168Z] [hosting] release: {"name":"projects/338591330430/sites/golinbox-altschool-exam/channels/live/releases/1667767807390110","version":{"name":"projects/338591330430/sites/golinbox-altschool-exam/versions/e735fd9a333fa289","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-11-06T20:49:47.357258Z","createUser":{"email":"jrmholawale@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu3S2DJTRv2T27Gc9QngV16MafbfTlTkKwYnDSfdJw"},"finalizeTime":"2022-11-06T20:50:06.436781Z","finalizeUser":{"email":"jrmholawale@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu3S2DJTRv2T27Gc9QngV16MafbfTlTkKwYnDSfdJw"}},"type":"DEPLOY","releaseTime":"2022-11-06T20:50:07.390110299Z","releaseUser":{"email":"jrmholawale@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu3S2DJTRv2T27Gc9QngV16MafbfTlTkKwYnDSfdJw"}}
+[info] +  hosting[golinbox-altschool-exam]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/golinbox-altschool-exam/overview
+[info] Hosting URL: https://golinbox-altschool-exam.web.app
+[debug] [2022-11-06T20:50:18.278Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\IT\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:253:49)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+[error] 
+[error] Error: An unexpected error has occurred.

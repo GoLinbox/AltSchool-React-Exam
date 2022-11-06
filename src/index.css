@@ -5,9 +5,370 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+    background-color: #110614;
+  color: #fff;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  padding: 15px 7%;
+  background-color: #190e1d;
+}
+.navigate {
+  padding: 10px 15px;
+  text-decoration: none;
+}
+.contact {
+  padding: 10px 30px;
+  margin-left: 50px;
+  background-color: #55014a;
+  border-radius: 15px;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.contact:hover {
+  background-color: #99317c;
+}
+.navigate::after {
+  content: " ";
+  width: 0%;
+  background-color: #99317c;
+  height: 2px;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.navigate:hover::after {
+  width: 100%;
+}
+.nav {
+  display: flex;
+  justify-content: center;
+  color: #b9f2fc;
+}
+.nav-wrap {
+  display: flex;
+}
+.logo {
+  margin-right: 20px;
+}
+.logo-img {
+  width: 22%;
+}
+.menu {
+  display: none;
+}
+.contact-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 25px;
+}
+.contact-details .fa {
+  color: #b9f2fc;
+  padding: 10px;
+  transition: 0.5s;
+}
+.contact-details .fa:hover {
+  color: #ac0295;
+}
+
+.auth-cont {
+  max-width: 250px;
+  width: 100%;
+  margin: 0px auto;
+}
+.auth-cont ul li {
+  list-style: none;
+}
+
+@media (max-width: 600px) {
+  .menu {
+    display: block;
+  }
+  .menu .fa {
+    color: #b9f2fc;
+    font-size: 1.5rem;
+  }
+  .nav {
+    flex-direction: column;
+  }
+  .nav {
+    overflow: hidden;
+    position: absolute;
+    background-color: #1d011b; 
+    width: 0%;
+    top: 10%;
+    right: 0%;
+    height: 80vh;
+    transition: 0.5s;
+  }
+  .nav-wrap {
+    flex-direction: column;
+    margin: 10px 20px;
+  }
+  .navigate {
+    display: block;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .contact {
+    text-align: center;
+    display: block;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 10px 25px;
+    margin: 0px auto;
+    margin-top: 25px;
+  }
+  .contact-details {
+    margin-left: 0px;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0px auto;
+  }
+}
+
+/*Home Page CSS*/
+.main {
+  margin-top: 30px;
+}
+.Header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+}
+
+.text {
+  max-width: 450px;
+  width: 100%;
+  margin: 0px auto;
+}
+
+.text .button p {
+  text-align: center;
+  padding: 3px 11px;
+  border-radius: 70px;
+  margin: 0px 5px;
+  background-color: #fff;
+  color: #ac0295;
+  font-size: 1.2rem;
+  align-items: center;
+}
+
+.text .button {
+  width: fit-content;
+  padding: 7px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: #ac0295;
+  color: #fff;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.text .button:hover {
+  background-color: #1d011b;
+}
+
+.text h1 {
+  font-size: 2.3rem;
+}
+
+@keyframes Head-Img {
+  from {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+.img {
+  max-width: 500px;
+  width: 100%;
+  margin: 10px auto;
+}
+.img img {
+  width: 70%;
+  animation-name: Head-Img;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-play-state: running;
+}
+
+/*Not Found Page CSS*/
+.NotFound-logo {
+  width: 10%;
+}
+.not-found {
+  text-align: center;
+  width: 100%;
+  margin: 15% auto;
+  font-size: 1.3rem;
+}
+.not-found h1 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+  margin-top: 50px;
+}
+.sol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sol a {
+  margin: 1px 8px;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.sol a:hover {
+  color: #99317c;
+}
+.not-found :any-link {
+  text-decoration: none;
+  padding: 0px 7px;
+  color: #99317c;
+  transition: 0.5s;
+}
+.not-found :any-link:hover {
+  color: #580253;
+}
+
+/* Error boundary css*/
+.error-boundary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15% auto;
+  color: #b9f2fc;
+  font-size: 1.2rem;
+}
+.error-boundary h2 {
+  font-size: 2.5rem;
+  margin-top: 60px;
+  margin-bottom: 1px;
+  color: #99317c;
+}
+
+/* Pages not ready*/
+.message {
+  max-width: 500px;
+  width: 100%;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.message  h2 {
+  margin-bottom: 10px;
+}
+
+.message hr {
+  width: 30%;
+  border: none;
+  height: 4px;
+  background-color: #99317c;
+  margin-top: 1px;
+}
+
+.page-content {
+  margin-top: 30%;
+  color: #b9f2fc;
+  border: 1px solid #190e1d;
+  padding-bottom: 40px;
+  border-radius: 10px;
+}
+.page-content h1 {
+  font-size: 2rem;
+  margin-bottom: 0px;
+}
+.page-content p {
+  padding-bottom: 20px;
+}
+.page-content :any-link {
+  border: 1px solid #55014a;
+  text-decoration: none;
+  border-radius: 7px;
+  background-color: transparent;
+  color: #b9f2fc;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.page-content :any-link:hover {
+  background-color: #55014a;
+}
+
+/*Pagination Css*/
+
+.load-error {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 30px;
+}
+.User {
+  max-width: 450px;
+  width: 100%;
+  margin: 10px auto;
+}
+.User .title {
+  text-align: center;
+  font-size: 1.7rem;
+}
+.User .details {
+  list-style: none;
+  border: 1px solid #55014a;
+  border-radius: 20px;
+  padding: 30px;
+  font-size: 1rem;
+}
+
+.User .pagination {
+  color: #b9f2fc;
+}
+
+.User .prev-next {
+  background-color: transparent;
+  border: 1px solid #55014a;
+  color: #b9f2fc;
+  padding: 5px 20px;
+  border-radius: 5px;
+  margin: 0px 10px;
+}
+.User .pages {
+  text-align: center;
+}
+.User .set-page {
+  background-color: transparent;
+  border: 1px solid #b9f2fc48;
+  color: #b9f2fc;
+  margin: 1px;
+  border-radius: 4px;
+}
+.User .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.User button {
+  cursor: pointer;
+  transition: 0.5s;
+}
+.User button:hover {
+  background-color: #55014a;
 }
